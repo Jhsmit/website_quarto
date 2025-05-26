@@ -18,7 +18,9 @@ This site supports optional GoatCounter analytics. To enable it:
 
 ## publish
 
-\$ quarto render copy static files (biosketch) check site
+\$ quarto render 
+
+check site
 
 \$ quarto publish --no-render
 
