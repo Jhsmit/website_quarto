@@ -29,6 +29,7 @@ website:
 
 format:
   html:
+    include-after-body: goatcounter.html
     theme: cosmo
     css: 
      - "styles.css"

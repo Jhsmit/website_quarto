@@ -8,6 +8,14 @@ uv venv install dependencies (from freeze.txt maybe) clone gpx repo git clone ht
 
 install extensions quarto add quarto-ext/fontawesome
 
+### Analytics
+
+This site supports optional GoatCounter analytics. To enable it:
+
+1. Copy `goatcounter.template.html` to `goatcounter.html`
+2. Replace `YOURID` with your GoatCounter site ID
+3. The site will automatically include it if `goatcounter.html` exists
+
 ## publish
 
 \$ quarto render copy static files (biosketch) check site
