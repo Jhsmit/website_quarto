@@ -6,7 +6,8 @@ This repository contains the source code for my personal [webpage](https://jhsmi
 
 uv venv install dependencies (from freeze.txt maybe) clone gpx repo git clone https://github.com/Jhsmit/hikes-gpx.git hikes/hikes-gpx
 
-quarto install extensions quarto add quarto-ext/fontawesome
+quarto install extensions 
+quarto add quarto-ext/fontawesome
 
 ### Analytics
 
