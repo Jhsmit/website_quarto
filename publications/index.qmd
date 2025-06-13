@@ -5,11 +5,7 @@ execute:
   freeze: false
 ---
 
-
-
-A full list of my published work can be found on [Google Scholar](https://scholar.google.com/citations?user=kl3VD7QAAAAJ&hl=en) and [ORCID](https://orcid.org/0000-0002-3597-9429)
-
-
+Below is a full ist of my published works, including links to open PDFs, associated datasets, code and software, where applicable. 
 
 ```{python}
 # | output: true
