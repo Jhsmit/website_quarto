@@ -1,3 +1,7 @@
 polars
 numpy
 plotly==5.24.1 # new anywidget doesnt work yet
+ipymolstar
+molviewspec
+kingdon
+ipyleaflet
