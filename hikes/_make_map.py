@@ -1,13 +1,17 @@
 # %%
 from pathlib import Path
-from typing import Iterable
+from typing import Iterable, Optional
 
 import gpxpy
 from ipyleaflet import Map, Marker, MarkerCluster, Polyline, FullScreenControl
 from ipywidgets import HTML, Layout
+from datetime import datetime
+from itertools import cycle
 
 AMS = (2.377956, 4.897070)
 
+# !! moretehan is overlapping with another hike,
+# adjust colors?
 
 # %%
 
@@ -55,18 +59,50 @@ def make_tracks(segment_coords: Iterable[list[tuple[float, float]]]) -> list[Pol
 
 
 # %%
+def extract_date_from_path(fpath: Path) -> Optional[datetime]:
+    try:
+        date_part = fpath.stem.split("_")[0]
+        dt_from_date = datetime.strptime(date_part, "%Y-%m-%d")
+        return dt_from_date
+    except ValueError:
+        return None
+
+
+# %%
 m = Map(center=AMS, zoom=2, scroll_wheel_zoom=True, layout=Layout(height="600px"))
 m.add(FullScreenControl())
 
 dirs = [d for d in Path("hikes-gpx").iterdir() if valid(d)]
 markers = []
 for dpath in dirs:
-    segment_coords = [parse_gpx(fpath) for fpath in sorted(dpath.glob("*.gpx"))]
-    tracks = make_tracks(segment_coords)
-    for track in tracks:
+    location = None
+    previous_date = None
+
+    colors = cycle(["green", "blue"])
+    color = next(colors)
+
+    for i, fpath in enumerate(sorted(dpath.glob("*.gpx"))):
+        date = extract_date_from_path(fpath)
+
+        if date != previous_date:
+            color = next(colors)
+
+        segment = parse_gpx(fpath)
+        track = Polyline(
+            locations=segment,
+            color=color,
+            fill=False,
+            opacity=0.7,
+            scaling=False,
+            rotations=False,
+        )
         m.add(track)
-    # gpx_track = Polyline(locations=coords, color="blue", fill=False, opacity=0.7)
-    gpx_marker = Marker(location=segment_coords[0][0], draggable=False)
+        if i == 0:
+            location = segment[0]
+
+        previous_date = date
+
+    gpx_marker = Marker(location=location, draggable=False)
     if (Path("posts") / (dpath.stem + ".qmd")).exists():
         hike_name = dpath.stem.replace("-", " ").title()
         popup_html = f"""
