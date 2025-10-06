@@ -1,4 +1,7 @@
 roussel_how_secb_maintains_2025:
+  - link: https://www.nature.com/articles/s42003-025-08821-2.pdf
+    icon: fa fa-file-pdf
+    text: PDF
   - link: https://doi.org/10.5281/zenodo.15847471
     icon: ai ai-open-data
     text: Data
