@@ -59,6 +59,10 @@ def make_button(text: str, link: str, icon="ai ai-doi") -> tags.dom_tag:
 
 
 def citekey(entry: dict) -> str:
+    """Create a citation key from the entry.
+
+    with better bibtex not stricly necesary, could also use field "id".
+    """
     title = (
         "_".join(entry["title"].split()[:3])
         .replace("-", "_")
@@ -133,6 +137,8 @@ def make_pub(key: str) -> tags.dom_tag:
 
     return pub
 
+
+# %%
 
 PUB_DATA = {citekey(entry): entry for entry in json_loaded}
 LINK_DATA = yaml.safe_load(Path(yaml_links_path).read_text())
