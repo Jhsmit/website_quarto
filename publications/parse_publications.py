@@ -11,6 +11,7 @@ How to use:
 
 # %%
 from collections import defaultdict
+from typing import cast
 import dominate
 import dominate.tags as tags
 import json
@@ -50,8 +51,8 @@ def format_name(name_dict: dict) -> str:
     return name
 
 
-def make_button(text: str, link: str, icon="ai ai-doi") -> tags.a:
-    btn = tags.a(href=link, _class="pub-button", target="_blank")
+def make_button(text: str, link: str, icon="ai ai-doi") -> tags.dom_tag:
+    btn = cast(tags.dom_tag, tags.a(href=link, _class="pub-button", target="_blank"))
     with btn:
         tags.i(_class=icon)
         dom_text(text)
@@ -90,7 +91,7 @@ def get_title(entry: dict) -> str:
     return ""
 
 
-def make_pub(key: str) -> dominate.tags.p:
+def make_pub(key: str) -> tags.dom_tag:
     json_entry = PUB_DATA[key]
 
     # fix incorrect author name
@@ -102,7 +103,7 @@ def make_pub(key: str) -> dominate.tags.p:
     assert NAME in authors_fmt, "Author not found in the list of authors: " + str(key)
     author_tags = [dom_text(a) if a != NAME else tags.strong(a) for a in authors_fmt]
 
-    pub = tags.p()
+    pub = cast(tags.dom_tag, tags.p())
     for i, t in enumerate(author_tags):
         pub.add(t)
         if i == len(author_tags) - 1:
