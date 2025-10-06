@@ -12,7 +12,6 @@ How to use:
 # %%
 from collections import defaultdict
 from typing import cast
-import dominate
 import dominate.tags as tags
 import json
 import yaml
