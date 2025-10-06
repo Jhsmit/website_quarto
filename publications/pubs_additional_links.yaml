@@ -1,13 +1,13 @@
-rousselHowSecBMaintains2025:
+roussel_how_secb_maintains_2025:
   - link: https://doi.org/10.5281/zenodo.15847471
     icon: ai ai-open-data
-    text: data
+    text: Data
   - link: https://github.com/Jhsmit/SecB_MBP_HDXMS
     icon: fa-brands fa-github
-    text: Paper Code
+    text: HDXMS Code
   - link: https://github.com/Jhsmit/SecB_MBP_smFRET
     icon: fa-brands fa-github
-    text: Paper Code
+    text: smFRET Code
 yuan_structural_dynamics_of_2021:
   - link: https://pure.rug.nl/ws/files/637616440/1_s2.0_S0022283621004216_main.pdf
     icon: fa fa-file-pdf
@@ -17,7 +17,7 @@ yuan_structural_dynamics_of_2021:
     text: bioRxiv
   - link: https://zenodo.org/records/5680700
     icon: ai ai-open-data
-    text: data
+    text: Data
   - link: https://github.com/Jhsmit/T3SS-paper
     icon: fa-brands fa-github
     text: Paper Code
