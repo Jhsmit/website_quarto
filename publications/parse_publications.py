@@ -79,10 +79,15 @@ def get_year(entry: dict) -> str:
 
 
 def get_title(entry: dict) -> str:
-    try:
-        return entry["journalAbbreviation"]
-    except KeyError:
-        return entry["container-title"]
+    """Get the journal title from possible keys in the entry.
+
+    Return empty string if not found.
+    """
+    keys = ["container-title", "JournalAbbreviation"]
+    for key in keys:
+        if key in entry:
+            return entry[key]
+    return ""
 
 
 def make_pub(key: str) -> dominate.tags.p:
