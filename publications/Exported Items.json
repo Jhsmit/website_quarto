@@ -1,5 +1,63 @@
 [
 	{
+		"id": "rousselHowSecBMaintains2025",
+		"type": "article-journal",
+		"abstract": "Bacterial secretory proteins must remain soluble and non-folded until they reach the SecYEG translocase. Preprotein intrinsic features and chaperones can delay protein folding. The SecB chaperone is known to delay folding of some proteins, however the link between the folding state of a client and its interaction with SecB, until the client-transfer to the translocase remains elusive. This study unravels how a model client, maltose binding protein (MBP), is kept in a non-folded state by SecB. Using single-molecule FRET and hydrogen-deuterium exchange mass spectrometry, we describe in detail the folding pathway of the client and demonstrate that SecB acts first as an unfoldase, reverting partial folding and then as holdase, preventing folding. The presence of an SP delays the folding and stabilizes the client to SecB interaction. Single-point mutations that abolish formation of some foldons drastically increase the lifetime of the SecB-bound state. Towards delivery to the translocase, SecA interacts with the MBP:SecB complex forming a quaternary super-assembly thus, further stabilizing the disordered state of the client. Collectively, our study demonstrates the interplay between secretory chaperones and a model client, with SecB combining unfoldase and holdase activities to retain the client in a translocation-competent state while SecA secures this complex until later translocation.",
+		"container-title": "Communications Biology",
+		"DOI": "10.1038/s42003-025-08821-2",
+		"ISSN": "2399-3642",
+		"issue": "1",
+		"journalAbbreviation": "Commun Biol",
+		"language": "en",
+		"license": "2025 The Author(s)",
+		"note": "publisher: Nature Publishing Group",
+		"page": "1421",
+		"source": "www.nature.com",
+		"title": "How SecB maintains clients in a translocation competent state",
+		"URL": "https://www.nature.com/articles/s42003-025-08821-2",
+		"volume": "8",
+		"author": [
+			{
+				"family": "Roussel",
+				"given": "Guillaume"
+			},
+			{
+				"family": "Smit",
+				"given": "Jochem H."
+			},
+			{
+				"family": "Smets",
+				"given": "Dries"
+			},
+			{
+				"family": "Karamanou",
+				"given": "Spyridoula"
+			},
+			{
+				"family": "Economou",
+				"given": "Anastassios"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					10,
+					6
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2025",
+					10,
+					3
+				]
+			]
+		}
+	},
+	{
 		"id": "http://zotero.org/users/112239/items/BFLSN9ME",
 		"type": "article-journal",
 		"abstract": "Type III protein secretion is widespread in Gram-negative pathogens. It comprises the injectisome with a surface-exposed needle and an inner membrane translocase. The translocase contains the SctRSTU export channel enveloped by the export gate subunit SctV that binds chaperone/exported clients and forms a putative ante-chamber. We probed the assembly, function, structure and dynamics of SctV from enteropathogenic E. coli (EPEC). In both EPEC and E. coli lab strains, SctV forms peripheral oligomeric clusters that are detergent-extracted as homo-nonamers. Membrane-embedded SctV9 is necessary and sufficient to act as a receptor for different chaperone/exported protein pairs with distinct C-domain binding sites that are essential for secretion. Negative staining electron microscopy revealed that peptidisc-reconstituted His-SctV9 forms a tripartite particle of ∼22 nm with a N-terminal domain connected by a short linker to a C-domain ring structure with a ∼5 nm-wide inner opening. The isolated C-domain ring was resolved with cryo-EM at 3.1 Å and structurally compared to other SctV homologues. Its four sub-domains undergo a three-stage “pinching” motion. Hydrogen-deuterium exchange mass spectrometry revealed this to involve dynamic and rigid hinges and a hyper-flexible sub-domain that flips out of the ring periphery and binds chaperones on and between adjacent protomers. These motions are coincident with local conformational changes at the pore surface and ring entry mouth that may also be modulated by the ATPase inner stalk. We propose that the intrinsic dynamics of the SctV protomer are modulated by chaperones and the ATPase and could affect allosterically the other subunits of the nonameric ring during secretion.",
